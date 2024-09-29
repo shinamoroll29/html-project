@@ -1,3 +1,6 @@
+*{
+    background-color: pink;
+}
 .x{
     color: black;
     text-transform: uppercase;
@@ -7,11 +10,7 @@ h1{
     text-transform: uppercase;
     color: black;
 }
-.hellokitty{
-    margin-right: 25%;
-    text-align: center;
-    color:blue;
-}
+
 img{
     margin-left: 25%;
     border: 5px solid blueviolet;
