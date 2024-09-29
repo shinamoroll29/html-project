@@ -1,13 +1,18 @@
 .x{
+    color: black;
     text-transform: uppercase;
 }
 h1{
     text-align: center;
     text-transform: uppercase;
-    color: solid black;
+    color: black;
 }
-
 .hellokitty{
-    
-
+    margin-left: 25%;
+    text-align: center;
+    color:blue;
+}
+img{
+    margin-left: 25%;
+    border: 5px solid blueviolet;
 }
