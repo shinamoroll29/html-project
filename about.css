@@ -1,10 +1,10 @@
 .x{
     text-transform: uppercase;
-    color: grey;
 }
 h1{
+    text-align: center;
     text-transform: uppercase;
-    color: grey;
+    color: black;
 }
 
 .hellokitty{
