@@ -1,0 +1,67 @@
+.back{
+    text-align: left;
+    padding-right: 2%;
+    font-family: "Elsie Swash Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    background-color: pink;
+    text-align: center;
+}
+.ok{
+    text-transform: uppercase;
+    text-align: center;
+}
+h1{
+    font-family: "Elsie Swash Caps", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+    background-color: hotpink;
+}
+div{
+    display: inline-block;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border: solid paleturquoise;
+    margin: 10px;
+}
+.melodi:hover{
+    content: url(images/melodi.jpg);
+}
+.pocha:hover{
+    content: url(images/pocha.png.webp);
+}
+.shina:hover{
+    content: url(images/bokucinnamon.png);
+}
+.purin:hover{
+    content: url(images/purin.png);
+}
+.gude:hover{
+    content: url(images/gude.png);
+}
+.badtz:hover{
+    content: url(images/badtz.png);
+}
+.kero:hover{
+    content: url(images/kero.png);
+}
+.sam:hover{
+    content: url(images/sam.png);
+}
+.cat:hover{
+    content: url(images/cat.png);
+}
+.mimi:hover{
+    content: url(images/mimi.png);
+}
+.kitty:hover{
+    content: url(images/kitty.png);
+}
+.twin:hover{
+    content: url(images/twin.png);
+}

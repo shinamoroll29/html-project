@@ -1,0 +1,35 @@
+body{
+    background-color: pink;
+}
+h1{
+    font-family: "Elsie", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.kitty{
+    text-align: center;
+}
+ul{
+    text-align: center;
+    color: rgb(148, 4, 76);
+    text-transform: uppercase;
+}
+h2{
+    text-align: center;
+    font-family: "Elsie", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: rgb(148, 4, 76)
+
+}
+p{
+        text-align: center;
+        font-family: "Gamja Flower", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(148, 4, 76);
+}
+div{
+    background-color: rgb(243, 225, 247);
+}
