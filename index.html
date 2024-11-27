@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanrio Cuties</title>
+  <link rel="icon" href="./imahe/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chango&family=Coiny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFE4E1, #FFFAF0);
+      overflow-x: hidden;
+      background: url(./imahe/yes.png) no-repeat center center/cover;
+    }
+
+    /* Header */
+    header {
+      background: rgba(255, 228, 225, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-family: 'chango', sans-serif ;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #FF69B4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i {
+      font-size: 3rem;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #555;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #FF69B4;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('./imahe/clouds-bg.png') center/cover no-repeat;
+      color: #FF1493;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      margin-bottom: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-family: 'coiny', cursive;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: typewriter 3s steps(30, end);
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid white;
+    }
+
+    .hero p {
+      font-family: 'Sour gummy', normal;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 50px;
+      background: rgba(255, 245, 247, 0.95);
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 1000px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .about-section h1 {
+      text-align: center;
+      font-family: 'coiny', cursive;
+      font-size: 50px;
+      color: #FF69B4;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-family: 'sour gummy', sans-serif;  
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: justify;
+      color: #444;
+      padding-bottom: 5%;
+    }
+    
+    .head h3{
+    font-family: "Coiny", serif;
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+    font-size: 50px;
+    }
+
+    
+    .kuan{
+    display: flex;
+    flex-direction: column;
+    width: 420px; 
+    margin-top: 20px; 
+    }
+
+    .kuan a{
+    font-family: "Coiny", serif;
+    font-weight: 400;
+    font-style: normal;
+    float: left;
+    font-size: 50px;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    }
+
+    .philo h1{
+        font-family: 'sour gummy', sans-serif;
+        font-size: 30px;
+    }
+
+    .philo p{
+      line-height: 1.8;
+    }
+
+    .message p{
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .message img{
+      width: 25%;
+      height: 50%;
+      display: flex;
+      padding-bottom: 5%;
+    }
+
+
+    /* Characters Section */
+    .characters {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 30px; 
+  padding: 50px 0;
+}
+
+.box {
+  width: 200px;
+  background: #FFF;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box img {
+  width: 100%;
+  height: 45%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.box p {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1rem;
+  color: #666;
+}
+
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #FFB6C1, #FF69B4);
+      color: white;
+      margin-top: 50px;
+    }
+
+    .social a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .social a:hover {
+      transform: scale(1.2);
+    }
+
+    .heart {
+      color: red;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #FF69B4;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top:hover {
+      background: #FF1493;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="material-icons">favorite</i> Sanrio Cuties</div>
+    <ul class="navbar">
+      <li><a href="#home"><i class="material-icons">home</i> Home</a></li>
+      <li><a href="#about"><i class="material-icons">info</i> About</a></li>
+      <li><a href="#characters"><i class="material-icons">face</i> Characters</a></li>
+      <li><a href="#contact"><i class="material-icons">contacts</i> Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h2>Welcome to Sanrio Cuties!</h2>
+      <p>Explore the world of adorable characters and pastel colors!</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <h1>About Sanrio</h1>
+      <p>Sanrio is a Japanese company known for creating and licensing a charming world of characters that are beloved globally. Founded in 1960 by Shintaro Tsuji, Sanrio started as a company that sold silk products and small, whimsical gifts. Over the years, Sanrio’s mission to spread happiness and friendship through "small gifts, big smiles" led to the birth of its most iconic characters.</p>
+        <br>
+
+        <section class="o">
+        <div class="philo">
+          <h1>みんな “nakayoku”
+            — The meaning of this phrase is “Getting Along Together” in English.
+            みんな (minna) means “all of us”, and nakayoku means “friendship”</h1>
+            <br>
+            <p>Everyone wants to be happy. <br><br>
+            It is a fundamental human desire. But what is true happiness?<br><br>
+            No one can live in isolation. We can only survive with the support of others, including our parents, children, siblings, spouses, friends, and loved ones as well as colleagues at school, <br>work, and around the world. To believe in and live in harmony with those we share our lives with—is this not true happiness?<br><br>
+            To understand and get along with the people with whom we share our lives, it is important to trust, respect, and love each other. To communicate these feelings is the philosophy that <br>guides Sanrio. <br><br>
+            Since its founding in 1960, Sanrio has applied our philosophy to all that we do, including the planning and sale of gifts and greeting cards, the editing and printing of publications and <br>the Strawberry Newspaper, and our theme park business. Through these endeavors, we aim to be in the business of sharing and communicating love. <br><br>
+            Inspired by our vision of “One World, Connecting Smiles”, we aim to achieve our corporate philosophy of "everyone getting along together”, by creating smiles one person at a time <br>and spreading the circle of happiness even further afield. <br><br>
+            We want as many people as possible to feel the joy of knowing they have someone they can talk heart-to-heart with, regardless of whether they are happy, sad, or in pain. <br><br>
+            These concepts are at the cornerstone of everything we do. <br>
+            </p>
+          </div>
+          <br>
+          <hr>
+        </section>
+
+        <section class="p">
+          <div class="message">
+          <h1>Top Message</h1>
+          <br>
+          <img src="./imahe/whodis.png" alt="">
+          <p>I would like to extend to you my heartfelt appreciation for your ongoing support of Sanrio and our characters over the years. <br> <br>
+            Under the corporate philosophy of みんなnakayoku (The meaning of this phrase is “Getting Along Together” in English.　<br>みんな (minna) means “all of us”, and nakayoku means “friendship”), which has guided our company since its <br>inception, our greatest desire is to connect people. Over the course of our history, we have grown thanks to the various <br>characters we have created and our stores and global licensing business which leverage these characters. We must not <br>allow ourselves to only follow what we know, however, but evolve our business to meet the needs of the times. <br> <br>
+            We will constantly seek reform in all business models, initiate structural reforms where necessary, develop new <br>innovative businesses, and constantly strive to evolve as a global entertainment company so as not to be left behind by <br>the current trends. <br> <br>
+            In 2021 we established the new vision, One World, Connecting Smiles. This vision refers to our corporate philosophy of <br>"everyone getting along together in harmony”, which we aim to achieve by creating smiles one person at a time and <br>spreading the circle of happiness even further afield. <br> <br>
+            We believe that the means to achieving this vision is through the entertainment that we create. <br><br>
+            Due to a variety of factors, changes are taking place around the world, and conventional wisdom no longer always <br>applies―the entertainment industry is no exception. Though the essence of entertainment remains unchanged, how we <br>experience entertainment, including purchasing behaviors and touchpoints in the customer experience, are changing <br>dramatically. <br> <br>
+            We at Sanrio are committed to keeping up with the times and staying ahead of the curve in all aspects of our business: <br>in store development, products, design, and licensing, as well as customer experiences. <br> <br>
+            Sanrio adds new value to entertainment and envisions the next generation of fun and joy being co-created by <br>everyone. <br><br>
+            As a business, we will continue to make bold and innovative changes, while remaining true to our original corporate <br>philosophy. Even in times of global uncertainty, Sanrio will persevere to be a company that helps people around the <br>world live in harmony, and continue to create moments of smiles, peace, and happiness for all people. <br><br>
+          </p>
+          </div>
+    </section>
+
+    <section id="characters">
+      <h1 style="text-align:center; color: #FF69B4;">Sanrio Characters</h1>
+      <div class="characters">
+        <!-- Example Character -->
+        <div class="box">
+          <img src="./imahe/hellogiti.png" alt="Hello Kitty">
+          <p>Hello Kitty (ハローキティ, Harō Kiti) is the best-known of Sanrio's fictional characters, created in 1974. Hello Kitty is drawn simply with a trademark red bow. </p>
+        </div>
+        <div class="box">
+            <img src="./imahe/last.png" alt="Cinnamoroll ">
+            <p>Cinnamoroll (シナモロール, Shinamorōru), born on March 6, 2002, on a cloud far up in the sky, is a white and chubby puppy with long ears that enable him to fly.</p>
+          </div>
+          <div class="box">
+            <img src="./imahe/3.png" alt="Kuromi">
+            <p>Kuromi (クロミ, Kuromi) is the rival of My Melody from the anime Onegai My Melody.</p>
+          </div>
+          <div class="box">
+            <img src="./imahe/badts.png" alt="Bad Badtz-Maru ">
+            <p>Bad Badtz-Maru (バッドばつ丸, Baddo batsu maru) is a male penguin with spiky hair. His birthday is April 1 (April Fool's Day).</p>
+          </div>
+          
+      </div>
+      
+    </section>
+    <section id="characters">
+        <div class="characters">
+            <div class="box">
+                <img src="./imahe/purin.png" alt="Pompompurin">
+                <p>Pompompurin (or Pudding Dog) is a good-natured Golden Retriever dog character introduced by the Japanese company Sanrio in 1996.</p>
+              </div>
+              <div class="box">
+                <img src="./imahe/melo.png" alt="My Melody">
+                <p>My Melody is a little girl rabbit who is always shown wearing either a red or pink hood that covers her ears.</p>
+              </div>
+              <div class="box">
+                <img src="./imahe/kero.png" alt="Keroppi">
+                <p>Keroppi (はすの上 けろっぴ, Hasunoue Keroppi) (also known as Kerokerokeroppi) is a frog character with large eyes and a V-shaped mouth.</p>
+              </div>
+              <div class="box">
+                <img src="./imahe/pocha.png" alt="Pochacco">
+                <p>Pochacco (po-cha-ko) is one of the many fictional characters produced by the Japanese corporation Sanrio.</p>
+              </div>
+         </div>
+
+
+    </section>
+    <section id="characters">
+        <div class="characters">
+            <div class="box">
+                <img src="./imahe/gude.png" alt="Gudetama">
+                <p>Gudetama is normally a chilling yolk of a raw egg with a butt crack. </p>
+              </div>
+              <div class="box">
+                <img src="./imahe/kiki.png" alt="Kiki">
+                <p>Kiki (キキ, Kiki), the younger brother, has short blue (or sometimes brown) hair.</p>
+              </div>
+              <div class="box">
+                <img src="./imahe/lala.png" alt="Lala">
+                <p>Lala (ララ, Rara), the older sister, has long pink (or sometimes blonde) hair.</p>
+              </div>
+              
+        </div>
+
+
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="#"><i class="material-icons">facebook</i> Facebook</a>
+      <a href="#"><i class="material-icons">photo_camera</i> Instagram</a>
+      <a href="#"><i class="material-icons">play_circle</i> TikTok</a>
+    </div>
+    <p>&copy; 2024 Sanrio Cuties. Made with <span class="heart">♥</span>.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop"><i class="material-icons">arrow_upward</i></button>
+  <script>
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) backToTopButton.style.display = "block";
+      else backToTopButton.style.display = "none";
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
